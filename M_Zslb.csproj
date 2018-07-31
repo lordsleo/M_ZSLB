@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F3E29DE9-D475-4B72-B318-382C7475FAC8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>M_Zslb</RootNamespace>
+    <AssemblyName>M_Zslb</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IPortData, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d68b0a7daaf47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\IPortData.dll</HintPath>
+    </Reference>
+    <Reference Include="leo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\leo.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\IPortData.dll" />
+    <Content Include="bin\leo.dll" />
+    <Content Include="bin\log4net.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="Css\css.css" />
+    <Content Include="Jquery\jquery-2.1.0.min.js" />
+    <Content Include="Service\BusinessInformation\GetMonthBusinessInformation.aspx" />
+    <Content Include="Service\BusinessInformation\GetTodayBusinessInformation.aspx" />
+    <Content Include="Service\MaterialConsumption\GetMonthMaterialInStorage.aspx" />
+    <Content Include="Service\MaterialConsumption\GetMonthMaterialOutStorage.aspx" />
+    <Content Include="Service\MaterialConsumption\GetTodayMaterialInStorage.aspx" />
+    <Content Include="Service\MaterialConsumption\GetTodayMaterialOutStorage.aspx" />
+    <Content Include="Service\News\GetAllNewsList.aspx" />
+    <Content Include="Service\News\NewsDetail.aspx" />
+    <Content Include="Service\News\NewsDetail.html" />
+    <Content Include="Service\Operation\GetMonthOperation.aspx" />
+    <Content Include="Service\Operation\GetMonthOperationDetails.aspx" />
+    <Content Include="Service\Operation\GetTodayOperation.aspx" />
+    <Content Include="Service\Operation\GetTodayOperationDetails.aspx" />
+    <Content Include="Service\SafetyProduction\GetAlarmEnquiriesInformation.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conmon\DicPackage.cs" />
+    <Compile Include="Conmon\FileTool.cs" />
+    <Compile Include="Conmon\Format.cs" />
+    <Compile Include="Conmon\LogTool.cs" />
+    <Compile Include="Conmon\Package.cs" />
+    <Compile Include="Conmon\StringTool.cs" />
+    <Compile Include="Conmon\TokenTool.cs" />
+    <Compile Include="Conmon\XmlTool.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\BusinessInformation\GetMonthBusinessInformation.aspx.cs">
+      <DependentUpon>GetMonthBusinessInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\BusinessInformation\GetMonthBusinessInformation.aspx.designer.cs">
+      <DependentUpon>GetMonthBusinessInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\BusinessInformation\GetTodayBusinessInformation.aspx.cs">
+      <DependentUpon>GetTodayBusinessInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\BusinessInformation\GetTodayBusinessInformation.aspx.designer.cs">
+      <DependentUpon>GetTodayBusinessInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\MaterialConsumption\GetMonthMaterialInStorage.aspx.cs">
+      <DependentUpon>GetMonthMaterialInStorage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\MaterialConsumption\GetMonthMaterialInStorage.aspx.designer.cs">
+      <DependentUpon>GetMonthMaterialInStorage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\MaterialConsumption\GetMonthMaterialOutStorage.aspx.cs">
+      <DependentUpon>GetMonthMaterialOutStorage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\MaterialConsumption\GetMonthMaterialOutStorage.aspx.designer.cs">
+      <DependentUpon>GetMonthMaterialOutStorage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\MaterialConsumption\GetTodayMaterialInStorage.aspx.cs">
+      <DependentUpon>GetTodayMaterialInStorage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\MaterialConsumption\GetTodayMaterialInStorage.aspx.designer.cs">
+      <DependentUpon>GetTodayMaterialInStorage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\MaterialConsumption\GetTodayMaterialOutStorage.aspx.cs">
+      <DependentUpon>GetTodayMaterialOutStorage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\MaterialConsumption\GetTodayMaterialOutStorage.aspx.designer.cs">
+      <DependentUpon>GetTodayMaterialOutStorage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\News\GetAllNewsList.aspx.cs">
+      <DependentUpon>GetAllNewsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\News\GetAllNewsList.aspx.designer.cs">
+      <DependentUpon>GetAllNewsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\News\NewsDetail.aspx.cs">
+      <DependentUpon>NewsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\News\NewsDetail.aspx.designer.cs">
+      <DependentUpon>NewsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Operation\GetMonthOperation.aspx.cs">
+      <DependentUpon>GetMonthOperation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\Operation\GetMonthOperation.aspx.designer.cs">
+      <DependentUpon>GetMonthOperation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Operation\GetMonthOperationDetails.aspx.cs">
+      <DependentUpon>GetMonthOperationDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\Operation\GetMonthOperationDetails.aspx.designer.cs">
+      <DependentUpon>GetMonthOperationDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Operation\GetTodayOperation.aspx.cs">
+      <DependentUpon>GetTodayOperation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\Operation\GetTodayOperation.aspx.designer.cs">
+      <DependentUpon>GetTodayOperation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Operation\GetTodayOperationDetails.aspx.cs">
+      <DependentUpon>GetTodayOperationDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\Operation\GetTodayOperationDetails.aspx.designer.cs">
+      <DependentUpon>GetTodayOperationDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\SafetyProduction\GetAlarmEnquiriesInformation.aspx.cs">
+      <DependentUpon>GetAlarmEnquiriesInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\SafetyProduction\GetAlarmEnquiriesInformation.aspx.designer.cs">
+      <DependentUpon>GetAlarmEnquiriesInformation.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\fabu.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Service\ComprehensiveAnalysis\" />
+    <Folder Include="Service\EnergyConsumption\" />
+    <Folder Include="Service\ProductionBusiness\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>9450</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:9450/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
